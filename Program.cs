@@ -5,7 +5,7 @@
         HaloGeneric.SapaUser<string>("Dhafa");
         Console.WriteLine();
         DataGeneric<int> DataNIM = new DataGeneric<int>(1302210042);
-        Console.WriteLine(DataNIM.PrintData(InputData));
+        DataNIM.PrintData();
     }
 } 
 
@@ -19,15 +19,15 @@ public class HaloGeneric
 
 public class DataGeneric<T>
 {
-    private T data;
+    public T data;
 
     public DataGeneric(T InputData)
     {
         this.data = InputData;
     }
 
-    public static void PrintData(T InputData)
+    public void PrintData()
     {
-        Console.WriteLine("Data yang tersimpan adalah: " + InputData);
+        Console.WriteLine("Data yang tersimpan adalah: " + data);
     }
 }
